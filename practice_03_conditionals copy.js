@@ -1,3 +1,4 @@
+
 // ==========================================================
 // AP CSP — JavaScript: Conditionals & Boolean Logic
 // practice_03_conditionals.js
@@ -15,6 +16,9 @@
 //   "negative odd"    if num is negative and odd
 function classifyNumber(num) {
   // TODO: your code here
+  if (num === 0) {
+    return "zero"
+  } else if {}
 }
 
 console.log(classifyNumber(0)); // "zero"
