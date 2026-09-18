@@ -1,4 +1,3 @@
-
 // ==========================================================
 // AP CSP — JavaScript: Conditionals & Boolean Logic
 // practice_03_conditionals.js
@@ -17,8 +16,16 @@
 function classifyNumber(num) {
   // TODO: your code here
   if (num === 0) {
-    return "zero"
-  } else if {}
+    return "zero";
+  } else if (num % 2 === 0 && num > 0) {
+    return "positive even";
+  } else if (num % 2 === 1 && num > 0) {
+    return "positive odd";
+  } else if (num % 2 === 0 && num < 0) {
+    return "negative even";
+  } else if (num % 2 === -1 && num < 0) {
+    return "negative odd";
+  }
 }
 
 console.log(classifyNumber(0)); // "zero"
@@ -37,8 +44,20 @@ console.log(classifyNumber(-7)); // "negative odd"
 // If score is less than 0 or greater than 100, return "Invalid score".
 function getLetterGrade(score) {
   // TODO: your code here
+  if (score >= 90 && score <= 100) {
+    return "A";
+  } else if (score >= 80 && score <= 100) {
+    return "B";
+  } else if (score >= 70 && score <= 100) {
+    return "C";
+  } else if (score >= 60 && score <= 100) {
+    return "D";
+  } else if (score < 60 && score >= 0) {
+    return "F";
+  } else {
+    return "Invalid score";
+  }
 }
-
 console.log(getLetterGrade(95)); // "A"
 console.log(getLetterGrade(82)); // "B"
 console.log(getLetterGrade(59)); // "F"
@@ -53,6 +72,10 @@ console.log(getLetterGrade(150)); // "Invalid score"
 //   otherwise, num converted to a string
 function fizzBuzz(num) {
   // TODO: your code here
+  if (num % 3 == 0 && num % 5 == 0) return "FizzBuzz";
+  else if (num % 5 == 0) return "Buzz";
+  if (num % 3 == 0) return "Fizz";
+  else return num;
 }
 
 console.log(fizzBuzz(3)); // "Fizz"
@@ -69,7 +92,8 @@ console.log(fizzBuzz(7)); // "7"
 //   weight <= 5  -> 8
 //   weight > 5   -> 12
 function getShippingCost(weight, isMember) {
-  // TODO: your code here (nested conditional — check isMember first, then weight)
+  // TODO: your code here (nested conditional — check isMember first, then weight) 
+  if (isMember === true)
 }
 
 console.log(getShippingCost(3, true)); // 0
